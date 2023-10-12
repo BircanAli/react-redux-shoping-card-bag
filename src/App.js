@@ -12,10 +12,12 @@ function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(calculateTotals());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cartItems]);
 
   useEffect(() => {
     dispatch(getCartItems("random"));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (isLoading) {
